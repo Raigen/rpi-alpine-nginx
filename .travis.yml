@@ -8,7 +8,7 @@ script:
 # build image
 - docker build -t raigen/rpi-alpine-nginx .
 # test image
-- docker run raigen/rpi-alpine-nginx -v
+- docker run raigen/rpi-alpine-nginx nginx -v
 # push image
 - >
   if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
