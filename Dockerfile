@@ -1,7 +1,7 @@
 FROM hypriot/rpi-alpine:3.4
 MAINTAINER Raigen
 
-NGINX_VERSION 1.10.1
+ENV NGINX_VERSION 1.10.1
 
 RUN apk add --update --no-cache nginx
 
