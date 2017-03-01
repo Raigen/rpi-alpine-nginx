@@ -1,7 +1,13 @@
-FROM hypriot/rpi-alpine:3.4
+FROM hypriot/rpi-alpine:3.5
 MAINTAINER Raigen
 
-ENV NGINX_VERSION 1.10.1
+ENV NGINX_VERSION 1.10.2
+
+LABEL org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.name="Nginx" \
+      org.label-schema.description="Nginx based on hypriot-alpine" \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/Raigen/rpi-alpine-nginx"
 
 RUN apk add --update --no-cache nginx
 
